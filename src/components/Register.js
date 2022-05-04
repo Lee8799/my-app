@@ -9,7 +9,7 @@ const handleSubmit = (event)=>{
     if (password !== passwordCon) {
         alert("Passwords don't match!");
     } else {
-        fetch('https://strangers-things.herokuapp.com/api/2110-vpi-web-pt-resources/users/register', {
+        fetch('https://strangers-things.herokuapp.com/api/2110-vpi-web-pt/users/register', {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'

@@ -1,4 +1,5 @@
 import React, { useEffect, useState} from 'react';
+import DeletePost from './DeletePost';
 // import { Link } from 'react-router-dom'; 
 
 
@@ -7,7 +8,7 @@ function Post(props) {
   const [posts, setPosts] = useState([]);
   console.log('posts', posts)
   useEffect(() => {
-    fetch ('https://strangers-things.herokuapp.com/api/2110-vpi-web-pt-resources/posts')
+    fetch ('https://strangers-things.herokuapp.com/api/2110-vpi-web-pt/posts')
     .then((res)=> res.json())
     .then(({data})=>{
       console.log ('data', data)
@@ -28,6 +29,7 @@ function Post(props) {
                     <p className="post-price">Price: {post.price}</p>
                     <p className="post-seller">Seller: {post.author.username} </p>
                     <p className="post-location">Location: {post.location} </p>
+                    {<DeletePost/>}
                 </div>
                 ))}
     </div>

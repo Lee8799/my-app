@@ -3,15 +3,16 @@ import {useState} from 'react';
 import { Link } from 'react-router-dom';
 
 
-function Login() {
+function Login(props) {
   const [username, setUsername] = useState ('');
   const [password, setPassword] = useState ('');
+    const setLogin = props.logIn
 
   console.log('username:',username)
   console.log('password:',password)
   const handleSubmit = async (event) => {
     // event.preventdefault ();
-    await fetch ('https://strangers-things.herokuapp.com/api/2110-vpi-web-pt-resources/users/login', {
+    await fetch ('https://strangers-things.herokuapp.com/api/2110-vpi-web-pt/users/login', {
         method: "POST",
         headers: {
             'Content-Type': 'application/json'
@@ -45,4 +46,4 @@ function Login() {
   )
 }
 
-export default Login
+export default Login;

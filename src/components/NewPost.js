@@ -10,7 +10,7 @@ const NewPost = () =>{
     e.preventDefault()
 
 
-    await fetch('https://strangers-things.herokuapp.com/api/2110-vpi-web-pt-resources/posts', {
+    await fetch('https://strangers-things.herokuapp.com/api/2110-vpi-web-pt/posts', {
         method: "POST",
         headers: {
             'Content-Type': 'application/json',
