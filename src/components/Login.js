@@ -44,7 +44,7 @@ function Login(props) {
                 <button type='submit'>Log In</button>
                 reload(Login);
         </form>
-            <Link to="/Register">Don't have an account yet? Register today!</Link>
+            <Link to="/Register">Don't have an account? Register today!</Link>
 
     </div>
   )
