@@ -12,7 +12,7 @@ function Login(props) {
   console.log('username:',username)
   console.log('password:',password)
   const handleSubmit = async (event) => {
-    
+    event.preventDefault();
     await fetch ('https://strangers-things.herokuapp.com/api/2110-vpi-web-pt/users/login', {
         method: "POST",
         headers: {
@@ -42,7 +42,7 @@ function Login(props) {
                 <label htmlFor='password'>Password:</label>
                 <input type='password' required minLength='4' name='password' value={password} onChange={(event) => setPassword(event.target.value)} />
                 <button type='submit'>Log In</button>
-                reload(Login);
+                
         </form>
             <Link to="/Register">Don't have an account? Register today!</Link>
 
