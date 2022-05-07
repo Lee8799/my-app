@@ -1,25 +1,26 @@
 import React from 'react'
-
+// import { Post } from './components';
 
 
 const DeletePost = (props) => {
-
-  const delID = props.id 
-  // console.log (delID, 'deletions')
+  // const [deletePost, setDeletePost] = useState ([]);
+  const postId = props.id 
+  console.log ('postId:', postId)
+  
 
   const token = 'Bearer ' + localStorage.getItem('token')
   const handleSubmit = async () => {
     
-    
-  await fetch (`https://strangers-things.herokuapp.com/api/2110-vpi-web-pt/posts/${delID}`, {
-      method: 'DELETE',
+
+  await fetch (`https://strangers-things.herokuapp.com/api/2110-vpi-web-pt/posts/${postId}`, {
+      method: "DELETE",
       headers: {
-        'Content-type': 'Application/json',
+        'Content-type': 'application/json',
         'Authorization': token
       }
       }).then((response) => response.json())
-       .then((result) => {
-      console.log(result);
+       .then((data) => {
+      console.log('newDATA', data);
   })
   .catch(console.error);
 
@@ -27,7 +28,8 @@ const DeletePost = (props) => {
   
    return (
      <div>
-       <button onClick = {handleSubmit}>DELETE</button>
+       <button onClick = {handleSubmit}>DELETE</button> 
+       
      </div>
    ) 
   }

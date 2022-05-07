@@ -30,8 +30,7 @@ function App() {
           <Route exact path="/Register" element={<Register/>}/>
           <Route exact path="/NewPost" element={<NewPost/>}/>
           <Route exact path="/EditPost" element={<EditPost/>}/>
-          <Route exact path="/DeletePost" element={<DeletePost/>}/>
-          {/* <Route exact path="/DeletePost" element={<DeletePost/>}/> */}
+          
 
           </Routes>
         </div>
